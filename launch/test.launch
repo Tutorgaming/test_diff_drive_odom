@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="odom_test" type="node" name="odom_publisher" output="screen">
+        <param name="wheel_separation" value="0.6"/>    
+        <param name="wheel_radius" value="0.020"/>
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_bumper"
+        args="0.200 0.00 0.200 0.00 0.00 1.00 0.00 base_link laser_frame 100" />
+</launch>
